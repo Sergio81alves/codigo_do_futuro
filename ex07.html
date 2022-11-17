@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco</title>
+</head>
+<body>
+    
+    <script>
+    /*francisco precisa de um sistema para gerenciar sua escola neste sistema precisamos capturar o aluno com as seguintes informações
+    
+    aluno
+        -nome
+        -matricula
+        -notas
+    as notas podem ser quantas o sistema quiser, ou seja deixe o usuário escolher a quantidade de notas
+    
+    neste sistema você irá fazer o: cadastro de alunos, digitando nome e matricula e notas vai precisar de um relatório, onde irá mostrar a lista dos alunos com nome, matricula, notas, média,
+    aprovado/reprovado/recuperação
+    criterios:
+    se a nota for >7 aprovado
+    se a nota for entre 5 e menor que 7 Recuperação
+    se a nota for menor 5 Reprovado */
+    
+    const cadastroAluno = () => {
+        
+    }
+
+
+    let inicialNum = prompt(` Olá 
+    1) para cadastrar
+    2) para lista dos alunos `)
+
+    let cadastro = []
+    cadastro.push(new alunos('Sergio', 01, 10))
+    cadastro.push(new alunos('Isaac', 02, 9))
+
+       
+    if(inicialNum == 1){
+    cadastro.nome = prompt('Digite o nome do Aluno')
+    cadastro.matricula = prompt('Digite a matricula do Aluno')
+    let qdNota = prompt('quantas notas você quer saber') 
+    let soma = 0 
+    cadastro.notas = []
+
+    for(i = 0;i < qdNota; i++){
+       let nota = parseInt(prompt(`Digite o valor da nota: ${i + 1} `))
+        cadastro.notas.push(nota)
+        soma += nota
+    }
+    cadastro.media = soma / cadastro.notas.length
+    
+        if(cadastro.media < 5){
+            cadastro.situacao = 'Reprovado'
+        }else if(cadastro.media >= 5 && cadastro.media < 7){
+            cadastro.situacao = 'Recuperação'
+        }else{
+            cadastro.situacao = 'Aprovado'
+        }
+    
+        let confirmação = confirm(
+            'Salvar estas informações?\n'+
+            '\nAluno: ' + cadastro.nome + 
+            '\nMatrícula: ' + cadastro.matricula + 
+            '\nNotas: ' + cadastro.notas.join(', ') + 
+            '\n Média Final: ' + cadastro.media + 
+            '\nStatus: ' + cadastro.situacao
+        )
+        if(confirmação) {
+            cadastro.push(alunos)
+        }
+        
+    }else if(inicialNum == 2){
+        let msg = ""
+        for(i = 0; i < cadastro.length;i++){
+        msg += `
+        Aluno: ${cadastro.nome}
+        Matricula: ${cadastro.matricula}
+        Quantidade de notas: ${cadastro.notas.join(', ')}
+        Média Final: ${cadastro.media} 
+        -------------------------------` 
+        }
+        alert(msg) 
+    }else{
+        alert('Opção invalida')
+    }
+            
+        
+            
+        
+
+      
+
+        function alunos(nome, matricula, media ){
+           this.nome = nome,
+           this.matricula = matricula,
+           this.media = media
+           
+        }
+        
+        
+        
+        
+        console.log(cadastro)
+
+
+    </script>
+</body>
+</html>

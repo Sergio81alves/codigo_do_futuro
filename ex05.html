@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- biana é uma pesoa indecisa, tem algumas opções
+
+Disney = R$ 15000
+Madrid = 12000 
+Maceio = 8000
+Ribeirao preto = 5000-->
+<script>
+let nome = prompt('Digite seu nome')
+
+let dinheiro = parseInt(prompt(`Olá ${nome} Qual o valor Disponivel`))
+
+let local = parseInt(prompt(`
+1) Disney 15000 
+2) Madrid 12000 
+3) Maceio 8000 
+4) Ribeirao 5000`))
+
+let viagem = 0
+
+switch(local){
+    case 1:
+    viagem = 15000 
+    break;
+    case 2:
+    viagem = 12000
+    break;
+    case 3:
+    viagem = 8000
+    break;
+    case 4:
+    viagem = 5000 
+    break;
+    
+}
+debugger
+    if(dinheiro < 1){
+        alert('Valor inválido')
+    }
+    let sobra = dinheiro - viagem
+    if(sobra < 0){
+        alert(`Você não pode viajar falta R$ ${(sobra * -1)}`)
+    }
+    else{
+        alert(`Você vai conseguir fazer a viagem e oseu troco é de R$ ${sobra}`)
+    }
+</script
+</body>
+</html>

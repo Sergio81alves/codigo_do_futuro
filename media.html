@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+    <script>
+        let nota1 = parseInt(prompt('Digite a primeira nota'));
+        let nota2 = parseInt(prompt('Digite a segunda nota'));
+        let nota3 = parseInt(prompt('Digite a terceira nota'))
+
+        let total = nota1 + nota2 + nota3
+        let media = (total / 3).toFixed(2)
+
+        if(media < 5){
+            console.log(` A média é ${media} Reprovado`)
+        }
+        if(media >= 5 && media <=7 ){
+            console.log(` A média é ${media} Recuperação`)
+        }
+        if(media > 7 ){
+            console.log(` A média é ${media} Aprovado` ) 
+        }
+        
+    </script>
+</body>
+</html>
