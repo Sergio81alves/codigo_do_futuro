@@ -30,6 +30,37 @@
     const par = numeros.filter(numero => numero%2 == 0 )
 
     console.log(par)
+
+    //find serve para encontrar alguma coisa no Array
+
+    const produtos = ['Fogão', 'Geladeira', 'Cama']
+
+    let encontrarCama = produtos.find(produto => produto === 'Geladeira')
+
+    console.log(encontrarCama)
+
+
+    //sort Ordenar o Array
+    let num = [52, 55, 20, 6, 8, 9, 100]
+
+    let crescente = num.sort((a,b) => a-b)
+
+    console.log(crescente)
+
+    let decrescente = num.sort((a,b) => b-a)
+
+    console.log(decrescente)
+
+
+    //reduce: reduz o array a um resultado de uma operação matematica
+
+    const numbers = [55, 6, 2]
+
+    const soma = numbers.reduce((Vanterior, Vsucessor) => {
+        return Vanterior + Vsucessor
+    })
+
+    console.log(soma)
     </script>
 </body>
 </html>
