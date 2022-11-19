@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+
+    <script>
+        let filmes =[ 
+         {
+            id: 1 ,
+            titulo:'Pantera Negra ' ,
+            descricao: 'Um filme de ação e aventura' ,
+            duracao: 120 
+        },
+        {
+            id: 2 ,
+            titulo:'Black adam ' ,
+            descricao: 'Um filme de suspense bem legal' ,
+            duracao: 120 
+        },
+        {
+            id: 3 ,
+            titulo:'Super shock ' ,
+            descricao: 'Um filme de ação e aventura' ,
+            duracao: 120 
+        }
+    ]
+    const [{id, titulo, descricao, duracao}] = filmes
+    
+    filmes.map(f => console.log(f.titulo))
+    </script>
+    
+</body>
+</html>
