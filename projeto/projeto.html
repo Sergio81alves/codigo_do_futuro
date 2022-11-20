@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Livros</title>
+</head>
+<body>
+    <!-- Projeto livro, bom eu tenho que fazer os livros guarda-los quando o usuario acessar a aplicação eu pergunto para ele se ele quer ver por categoria se sim eu mostro a categoria se não eu mostro todos os livros ordenados por numero de paginas (depois eu faço por id )  -->
+
+    <!--Categorias disponivel: Estilo de vida, historia brasileira,Américas, Tecnologia, ficção e romance-->
+    
+    <script>
+
+const livros = [
+    {
+        id: 1,
+        nome: 'Neuromance',
+        autor: 'William Gibson',
+        categoria: 'Ficção',
+        paginas: 320,
+        recomendada: true,
+        leu: true
+    },
+    {
+        id: 2,
+        nome: 'Nós',
+        autor: 'IEVGUÊNI ZAMIÁTIN',
+        categoria: 'Ficção',
+        paginas: 326,
+        recomendada: false,
+        leu: false
+    },
+    {
+        id: 3,
+        nome: 'O Morro dos Ventos Uivantes',
+        autor: 'Emily Brontë',
+        categoria: 'Romance',
+        paginas: 160,
+        recomendada: true,
+        leu: true
+    },
+    {
+        id: 4,
+        nome: 'Trabalhe 4 Horas por Semana',
+        autor: 'Timothy Ferriss',
+        categoria: 'Estilo de vida',
+        paginas: 313,
+        recomendada: false,
+        leu: true
+    },
+    {
+        id: 5,
+        nome: 'Casa-Grande & Senzala',
+        autor: 'Gilberto Freyre',
+        categoria: 'Historia brasileira',
+        paginas: 375,
+        recomendada: true,
+        leu: true
+    },
+    {
+        id: 6,
+        nome: 'O Mulato',
+        autor: 'Aluísio Azevedo',
+        categoria: 'Americas',
+        paginas: 341,
+        recomendada: true,
+        leu: true
+    },
+    {
+        id: 7,
+        nome: 'A Quarta Revolução Industrial',
+        autor: 'Klaus Schwab',
+        categoria: 'tecnologia',
+        paginas: 194,
+        recomendada: false,
+        leu: false
+    },
+]   
+        
+        let pergunta = prompt('Você quer ver os livros por categoria? sim/não')
+        let pergunta2 = ''
+        if(pergunta.toLowerCase() == 'sim' || pergunta == 's'){
+             pergunta2 = prompt(`Qual categoria, temos:
+            Estilo de vida,
+            Historia brasileira,
+            Americas,
+            Tecnologia,
+            Ficção,
+            Romance`)
+            debugger
+            switch(pergunta2.toLowerCase()) {
+            case "estilo de vida":
+                livros.filter( mostrar => console.table(mostrar.categoria === pergunta2)) ;
+                break;
+            case "historia brasileira":
+            livros.filter( mostrar => console.table(mostrar.categoria === pergunta2))
+                break;
+            case "americas":
+            livros.filter( mostrar => console.table(mostrar.categoria === pergunta2))
+                break;
+            case "tecnologia":
+            livros.filter( mostrar => console.table(mostrar.categoria === pergunta2))
+                break;
+            case "ficção":
+            livros.filter( mostrar => console.table(mostrar.categoria === pergunta2))
+                break;
+            case "romance":
+            livros.filter( mostrar => console.table(mostrar.categoria === pergunta2))
+                break;
+            default:
+                text = "I have never heard of that books...";
+            }
+        }else{
+            const livrosOrdenados = livros.sort((a, b) => a.paginas - b.paginas)
+            alert('Esses são todos os livros: ')
+           alert(livrosOrdenados)
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
